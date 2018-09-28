@@ -1,0 +1,60 @@
+.element {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-top: -2px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.element input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    transition: all 0.3s ease-in-out;
+}
+
+.element:hover input ~ .marker {
+    background-color: #ccc;
+}
+
+.element input:checked ~ .marker {
+    background-color: #00ff00;
+}
+
+.marker:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.element input:checked ~ .marker:after {
+    display: block;
+}
+
+.element .marker:after {
+    left: 4.5px;
+    top: 2px;
+    width: 3px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
