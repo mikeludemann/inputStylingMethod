@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    font-family: 'Times New Roman';
+    max-width: 400px;
+    margin: 30px auto 0;
+    display: block;
+    background: #FFF;
+    padding: 10px 50px 50px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 small {
+    font-weight: normal;
+    color: #888;
+    display: block;
+}
+
+.content--block {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #20D432;
+}
+
+.content--bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.content--bar:before, .content--bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #20D432;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.content--bar:before {
+    left: 50%;
+}
+
+.content--bar:after {
+    right: 50%;
+}
+
+input:focus ~ .content--bar:before, input:focus ~ .content--bar:after {
+    width: 50%;
+}
+
+.content--highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+input:focus ~ .content--highlight {
+    -webkit-animation: animateHighlight 0.3s ease;
+    -moz-animation: animateHighlight 0.3s ease;
+    animation: animateHighlight 0.3s ease;
+}
+
+@-webkit-keyframes animateHighlight {
+    from {
+        background: #20D432;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes animateHighlight {
+    from {
+        background: #20D432;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes animateHighlight {
+    from {
+        background: #20D432;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
