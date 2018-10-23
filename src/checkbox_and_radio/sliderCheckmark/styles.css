@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #20D432;
+    color: #fff;
+    padding-bottom: 10%;
+}
+
+h1 {
+    text-align: center;
+    margin: 20% 0 5%;
+    font-family: verdana;
+    font-weight: 100;
+}
+
+#radio--slider {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    position: absolute;
+    right: 1000%;
+}
+
+label {
+    float: left;
+    width: 15%;
+    padding-bottom: 15%;
+    margin: 0 2.5%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#slider--element {
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 10%;
+    padding-bottom: 10%;
+    margin: 2.5% 0 0 5%;
+    background: #fff;
+    transition: transform 1s;
+    border-radius: 50%;
+    animation-timing-function: ease-in-out;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    transition: 0.2s left .05s ease-in-out;
+}
+
+#one:checked ~ #slider--element {
+    animation-name: slideScale--one;
+    left: 0;
+}
+
+#two:checked ~ #slider--element {
+    animation-name: slideScale--two;
+    left: 20%;
+}
+
+#three:checked ~ #slider--element {
+    animation-name: slideScale--three;
+    left: 40%;
+}
+
+#four:checked ~ #slider--element {
+    animation-name: slideScale--four;
+    left: 60%;
+}
+
+#five:checked ~ #slider--element {
+    animation-name: slideScale--five;
+    left: 80%;
+}
+
+@keyframes slideScale--one {
+    25%, 75% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes slideScale--two {
+    25%, 75% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes slideScale--three {
+    25%, 75% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes slideScale--four {
+    25%, 75% {
+        transform: scale(0.5);
+    }
+}
+
+@keyframes slideScale--five {
+    25%, 75% {
+        transform: scale(0.5);
+    }
+}
